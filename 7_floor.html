@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SurSU_NAV</title>
+</head>
+<body>
+
+    <div id="header" class="header">
+        <div class="container">
+            <div class="nav">
+
+                    <ul class="ugol">
+                        <li>
+                            <a href="index.html">
+                                <img src="img/Logo.svg" alt="SurSU" class="logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                Навигация по Кораблю
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="stroll.html">
+                                <img src="img/back.svg" alt="back">
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="about1">
+        <img src="img/marker1.svg" id="marker1">
+        <img src="img/marker2.svg" id="marker2">
+
+        <script>
+            var marker1 = document.getElementById('marker1');
+            var marker2 = document.getElementById('marker2');
+
+
+            marker1.onmousedown = function(e) {
+
+            marker1.style.position = 'absolute';
+            moveAt(e);
+
+            document.body.appendChild(marker1);
+
+            marker1.style.zIndex = 1000;
+
+            function moveAt(e) {
+                marker1.style.left = e.pageX - marker1.offsetWidth / 2 + 'px';
+                marker1.style.top = e.pageY - marker1.offsetHeight / 2 + 'px';
+            }
+
+            document.onmousemove = function(e) {
+                moveAt(e);
+            }
+
+            marker1.onmouseup = function() {
+                document.onmousemove = null;
+                marker1.onmouseup = null;
+            }
+
+            marker1.ondragstart = function() {
+                return false;
+            }
+        };
+
+
+
+            marker2.onmousedown = function(e) {
+
+            marker2.style.position = 'absolute';
+            moveAt(e);
+
+            document.body.appendChild(marker2);
+
+            marker2.style.zIndex = 1000;
+
+            function moveAt(e) {
+                marker2.style.left = e.pageX - marker2.offsetWidth / 2 + 'px';
+                marker2.style.top = e.pageY - marker2.offsetHeight / 2 + 'px';
+            }
+
+            document.onmousemove = function(e) {
+                moveAt(e);
+            }
+
+            marker2.onmouseup = function() {
+                document.onmousemove = null;
+                marker2.onmouseup = null;
+            }
+
+            marker2.ondragstart = function() {
+                return false;
+            }
+
+            };
+        </script>
+
+
+        <div class="container">
+            <img src="img/7-1.svg" alt="7_floor" class="floor_7">
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="foot">
+                <ul>
+                    <li>
+                        Бета тест
+                    </li>
+                    <li class="proj">
+                        <a href="https://vk.com/dtsuguy">
+                        Следи за проектом
+                        </a>
+                    </li>
+                    <a href="https://vk.com/dtsuguy">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
